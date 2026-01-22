@@ -38,18 +38,15 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+            <div className="aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500 h-[500px] md:h-[550px] lg:h-[600px] w-[320px] md:w-[380px] lg:w-[450px]">
               <img
-                src="https://images.pexels.com/photos/3992859/pexels-photo-3992859.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="/pic1.jpg"
                 alt="Luxury salon interior"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-[#1a1a1a] rounded-2xl shadow-xl p-6 transform hover:scale-105 transition-transform duration-300 border border-gray-800">
-              <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-amber-400">500+</p>
-              <p className="text-sm text-gray-400 mt-1">Happy Clients</p>
-            </div>
+          
           </div>
         </div>
       </div>

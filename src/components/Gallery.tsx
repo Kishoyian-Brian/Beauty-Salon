@@ -1,31 +1,31 @@
 const galleryImages = [
   {
-    url: 'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: '/pic1.jpg',
     title: 'Hair Styling',
     category: 'Hair',
   },
   {
-    url: 'https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: '/pic2.jpg',
     title: 'Nail Art',
     category: 'Nails',
   },
   {
-    url: 'https://images.pexels.com/photos/3985328/pexels-photo-3985328.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: '/pic3.jpg',
     title: 'Facial Treatment',
     category: 'Skincare',
   },
   {
-    url: 'https://images.pexels.com/photos/3997986/pexels-photo-3997986.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: '/massage.jpg',
     title: 'Manicure',
     category: 'Nails',
   },
   {
-    url: 'https://images.pexels.com/photos/3993212/pexels-photo-3993212.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: '/massage2.png',
     title: 'Hair Color',
     category: 'Hair',
   },
   {
-    url: 'https://images.pexels.com/photos/3764013/pexels-photo-3764013.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: '/pic1.jpg',
     title: 'Spa Treatment',
     category: 'Spa',
   },
@@ -68,3 +68,4 @@ export default function Gallery() {
     </section>
   );
 }
+

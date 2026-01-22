@@ -1,26 +1,24 @@
-import { Scissors, Hand, Sparkles, Heart } from 'lucide-react';
-
 const services = [
   {
-    icon: Scissors,
+    image: '/pic1.jpg',
     title: 'Hair Styling',
     description: 'Expert cuts, coloring, and treatments to bring out your best look',
     color: 'from-rose-500 to-pink-600',
   },
   {
-    icon: Hand,
+    image: '/pic2.jpg',
     title: 'Nail Care',
     description: 'Manicures, pedicures, and nail art by certified technicians',
     color: 'from-amber-500 to-orange-600',
   },
   {
-    icon: Sparkles,
+    image: '/pic3.jpg',
     title: 'Skincare',
     description: 'Rejuvenating facials and treatments for glowing skin',
     color: 'from-rose-600 to-rose-700',
   },
   {
-    icon: Heart,
+    image: '/massage.jpg',
     title: 'Spa & Massage',
     description: 'Relaxing massages and spa treatments for total wellness',
     color: 'from-amber-600 to-amber-700',
@@ -39,23 +37,27 @@ export default function Services() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={index}
-                className="group bg-[#1a1a1a] rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-gray-800 hover:border-gray-700"
-              >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-8 h-8 text-white" />
-                </div>
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group bg-[#1a1a1a] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-gray-800 hover:border-gray-700"
+            >
+              <div className="aspect-square overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{service.description}</p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
+

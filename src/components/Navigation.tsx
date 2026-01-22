@@ -12,10 +12,9 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'services', label: 'Services' },
-    { id: 'booking', label: 'Book Now' },
     { id: 'gallery', label: 'Gallery' },
-    { id: 'testimonials', label: 'Reviews' },
     { id: 'contact', label: 'Contact' },
+    { id: 'booking', label: 'Book Now' },
   ];
 
   const scrollToSection = (id: string) => {
@@ -36,12 +35,16 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             <span className="text-2xl font-serif text-white">Luxe Beauty</span>
           </div>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors duration-300 hover:text-rose-400 ${
+                className={`${
+                  item.id === 'booking'
+                    ? 'bg-rose-500 text-white px-5 py-2.5 rounded-full hover:bg-rose-600 transition-colors duration-300'
+                    : 'text-lg font-medium transition-colors duration-300 hover:text-rose-400'
+                } ${
                   activeSection === item.id ? 'text-rose-400' : 'text-gray-300'
                 }`}
               >
@@ -66,7 +69,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 ${
+                className={`block w-full text-left px-4 py-2 rounded-lg text-lg transition-colors duration-300 ${
                   activeSection === item.id
                     ? 'bg-rose-500/20 text-rose-400'
                     : 'text-gray-300 hover:bg-gray-800'
