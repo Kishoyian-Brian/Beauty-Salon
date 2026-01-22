@@ -13,32 +13,52 @@ export default function Booking() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-const services = [
-  'Hair Styling',
-  'Braiding & Weaving',
-  'Nail Care',
-  'Facial & Skincare',
-  'Massage Therapy'
-];
+  const services = [
+    'Hair Styling',
+    'Braiding & Weaving',
+    'Nail Care',
+    'Facial & Skincare',
+    'Massage Therapy'
+  ];
 
-const stylists = [
-  'Wanjiku Mwangi',
-  'Achieng Odhiambo',
-  'Mercy Njeri',
-  'Faith Atieno'
-];
+  const stylists = [
+    'Wanjiku Mwangi',
+    'Achieng Odhiambo',
+    'Mercy Njeri',
+    'Faith Atieno'
+  ];
 
-const timeSlots = [
-  '09:00 AM',
-  '10:00 AM',
-  '11:00 AM',
-  '01:00 PM',
-  '02:00 PM',
-  '03:00 PM',
-  '04:00 PM'
-];
+  const timeSlots = [
+    '09:00 AM',
+    '10:00 AM',
+    '11:00 AM',
+    '01:00 PM',
+    '02:00 PM',
+    '03:00 PM',
+    '04:00 PM'
+  ];
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const message = `
+New Booking Request:
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Service: ${formData.service}
+Stylist: ${formData.stylist}
+Date: ${formData.date}
+Time: ${formData.time}
+    `;
+
+    const phoneNumber = "+254700866007"; // <-- put salon phone here
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp
+    window.open(whatsappLink, "_blank");
+
+    // Optional: show confirmation UI
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -74,7 +94,7 @@ const timeSlots = [
               <Check className="w-10 h-10 text-white" />
             </div>
             <h3 className="text-2xl font-semibold text-white mb-3">Booking Confirmed!</h3>
-            <p className="text-gray-400">We'll send you a confirmation email shortly.</p>
+            <p className="text-gray-400">Please send the WhatsApp message to confirm.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="bg-[#1a1a1a] rounded-3xl p-8 md:p-12 shadow-xl border border-gray-800">

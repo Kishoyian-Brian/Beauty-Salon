@@ -1,31 +1,31 @@
 const galleryImages = [
   {
-    url: '/pic1.jpg',
+    url: '/hair-color.jpg',
     title: 'Hair Styling',
     category: 'Hair',
   },
   {
-    url: '/pic2.jpg',
+    url: '/nails1.jpg',
     title: 'Nail Art',
     category: 'Nails',
   },
   {
-    url: '/pic3.jpg',
+    url: '/facial.jpg',
     title: 'Facial Treatment',
     category: 'Skincare',
   },
   {
-    url: '/massage.jpg',
+    url: '/manicure.jpg',
     title: 'Manicure',
     category: 'Nails',
   },
   {
-    url: '/massage2.png',
+    url: '/pic1.jpg',
     title: 'Hair Color',
     category: 'Hair',
   },
   {
-    url: '/pic1.jpg',
+    url: '/massage.jpg',
     title: 'Spa Treatment',
     category: 'Spa',
   },
