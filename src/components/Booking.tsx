@@ -13,10 +13,30 @@ export default function Booking() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const services = ['Hair Styling', 'Nail Care', 'Skincare', 'Spa & Massage'];
-  const stylists = ['Sarah Mitchell', 'Emma Rodriguez', 'Olivia Chen', 'Sophia Williams'];
-  const timeSlots = ['09:00 AM', '10:00 AM', '11:00 AM', '01:00 PM', '02:00 PM', '03:00 PM', '04:00 PM'];
+const services = [
+  'Hair Styling',
+  'Braiding & Weaving',
+  'Nail Care',
+  'Facial & Skincare',
+  'Massage Therapy'
+];
 
+const stylists = [
+  'Wanjiku Mwangi',
+  'Achieng Odhiambo',
+  'Mercy Njeri',
+  'Faith Atieno'
+];
+
+const timeSlots = [
+  '09:00 AM',
+  '10:00 AM',
+  '11:00 AM',
+  '01:00 PM',
+  '02:00 PM',
+  '03:00 PM',
+  '04:00 PM'
+];
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
@@ -70,7 +90,7 @@ export default function Booking() {
                     onChange={handleChange}
                     required
                     className="w-full pl-12 pr-4 py-3 rounded-xl bg-[#2a2a2a] border border-gray-700 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20 transition-all outline-none text-white placeholder-gray-500"
-                    placeholder="Jane Doe"
+                    placeholder="Your Name"
                   />
                 </div>
               </div>
@@ -84,7 +104,7 @@ export default function Booking() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-xl bg-[#2a2a2a] border border-gray-700 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20 transition-all outline-none text-white placeholder-gray-500"
-                  placeholder="jane@example.com"
+                  placeholder="youremail@gmail.com"
                 />
               </div>
             </div>
@@ -98,7 +118,7 @@ export default function Booking() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 rounded-xl bg-[#2a2a2a] border border-gray-700 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20 transition-all outline-none text-white placeholder-gray-500"
-                placeholder="+1 (555) 123-4567"
+                placeholder="+254 712 345 678"
               />
             </div>
 
